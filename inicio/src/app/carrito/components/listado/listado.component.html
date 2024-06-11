@@ -1,0 +1,25 @@
+<h1>Carrito De Compras</h1>
+
+<hr class="border border-primary border-1 opacity-75">
+<ul class="list-group">
+    <li *ngFor="let producto of productoList;
+    let i = index;
+    let first = first;
+    let last= last;
+    let isEven = even;" class="list-group-item d-flex justify-content-between"
+    [ngClass]="{'list-group-item-dark':last,'list-group-item-secondary':isEven}"
+    >
+        <div>
+            <span class="bagde bg-primary rounded-pill">{{i+1}}</span>
+            <span>
+                <strong> {{ producto.nombre }}</strong>
+            </span>
+            <i> {{ producto.descripcion }}</i>
+            $ {{ producto.precio }}
+        </div>
+        <span>
+            <button class="btn btn-danger" (click)="onEliminarProducto(i)">Eliminar</button>
+        </span>
+
+    </li>
+</ul>

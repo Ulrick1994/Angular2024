@@ -1,0 +1,16 @@
+
+<div class="container ">
+    <div class="row">
+      <div class="col"><app-header></app-header></div>
+    </div>
+  
+    <div class="row">
+      <div class="col-8"><app-listado [productoList]="productoList" (eliminarProducto)="eliminarProducto($event)"></app-listado></div>
+  
+      <div class="col-4"><app-agregar-prod (nuevoProduct)="nuevoProduct($event)"></app-agregar-prod> </div>
+     
+    </div>
+  
+    <div  class="row"> <app-footer></app-footer> </div>
+    
+  </div>

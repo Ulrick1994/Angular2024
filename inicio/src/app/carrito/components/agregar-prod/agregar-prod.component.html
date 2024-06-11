@@ -1,0 +1,23 @@
+
+
+<h1>Agregar Producto</h1>
+<hr class="border border-primary border-1 opacity-75">
+<!-- [(ngModel)]="producto.nombre" -->
+
+<form (ngSubmit)="agregarProducto()"> 
+    <div>
+        <label for="nombre" class="form-label">Nombre Del Producto</label>
+        <input type="text" [(ngModel)]="productoSopa.nombre"  name="nombre" id="nomProduct" class="form-control">
+    </div>
+    <div>
+        <label for="descripcion" class="form-label">Descripción Del Producto</label>
+        <input type="text" [(ngModel)]="productoSopa.descripcion"  name="descripcion" id="descripProduct" class="form-control">
+    </div>
+    <div>
+        <label for="precio" class="form-label">Precio Del Producto</label>
+        <input type="text"  [(ngModel)]="productoSopa.precio"  name="precio" id="precioProduct" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- {{ productoSopa|json}} -->
+</form>
+
